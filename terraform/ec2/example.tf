@@ -4,8 +4,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0b898040803850657"
-  instance_type = "t2.micro"
+  ami           = "ami-3f36be41"
+  instance_type = "t3.micro"
 }
 
 # resource "aws_vpc_peering_connection" "vpc-0d04ce1ec29cb411a" {
