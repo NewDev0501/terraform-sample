@@ -12,6 +12,8 @@ resource "aws_vpc" "vpc_name" {
   }*/
 }
 
+
+
 # Internet gateway for the public subnet
 resource "aws_internet_gateway" "demo_ig" {
   vpc_id = "${aws_vpc.vpc_name.id}"
