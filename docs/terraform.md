@@ -18,3 +18,17 @@
 # Verify terraform
 
 `terraform version`
+
+# Terrafom commands
+
+`terraform validate`
+
+`terraform init`
+
+`terraform plan`
+
+`terraform apply`
+
+`terraform apply -auto-approve`
+
+`terraform destroy`
