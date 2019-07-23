@@ -61,6 +61,13 @@ resource "aws_route_table_association" "vpc_public_sn_rt_assn" {
   route_table_id = "${aws_route_table.vpc_public_sn_rt.id}"
 }
 
+#Associate a new EC2 instance with VPC
+resource "aws_instance" "ec2" {
+  ami           = "ami-0b898040803850657"
+  instance_type = "t2.micro"
+  subnet_id = "${aws_subnet.vpc_public_sn.id}"
+}
+
 # ECS Instance Security group
 /*resource "aws_security_group" "vpc_public_sg" {
   name = "demo_pubic_sg"
