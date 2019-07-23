@@ -3,6 +3,7 @@ provider "aws" {
   region     = "${var.region}"
 }
 
+
 # Define a vpc
 resource "aws_vpc" "vpc_name" {
   cidr_block = "${var.vpc_cidr_block}"
