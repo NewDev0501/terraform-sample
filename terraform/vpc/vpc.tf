@@ -63,7 +63,8 @@ resource "aws_route_table_association" "vpc_public_sn_rt_assn" {
 
 #Associate a new EC2 instance with VPC
 resource "aws_instance" "ec2" {
-  ami                         = "ami-0b898040803850657"
+  # ami                         = "ami-0b898040803850657" #for us-east-1 region
+  ami                         = "ami-3f36be41" #for eu-north-1 region
   instance_type               = "t2.micro"
   subnet_id                   = "${aws_subnet.vpc_public_sn.id}"
   associate_public_ip_address = "true"
