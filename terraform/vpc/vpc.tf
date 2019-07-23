@@ -152,7 +152,7 @@ resource "aws_security_group" "vpc_private_sg" {
     cidr_blocks = [
     "0.0.0.0/0"]
   }
-  tags {
+  tags = {
     Name = "demo_private_sg"
   }
 }
