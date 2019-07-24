@@ -29,6 +29,8 @@ resource "aws_alb_target_group" "ecs-target-group" {
     tags = {
       Name = "ecs-target-group"
     }
+
+    instances = ["${aws_instance.ec2-01.id}","${aws_instance.ec2-02.id}"]
 }
 
 resource "aws_alb_listener" "alb-listener" {
