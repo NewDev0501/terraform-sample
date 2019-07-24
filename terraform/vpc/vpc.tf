@@ -68,6 +68,7 @@ resource "aws_instance" "ec2" {
   instance_type               = "t3.micro"
   subnet_id                   = "${aws_subnet.vpc_public_sn.id}"
   associate_public_ip_address = "true"
+  count = "2"
 }
 
 # ECS Instance Security group
