@@ -6,7 +6,7 @@ resource "aws_instance" "ec2-01" {
   instance_type               = "t3.micro"
   subnet_id                   = "${aws_subnet.vpc_public_sn.id}"
   associate_public_ip_address = "true"
-  user_data                   = "${file(userdata.sh)}"
+  user_data                   = "${file("userdata.sh")}"
 }
 
 
@@ -15,5 +15,5 @@ resource "aws_instance" "ec2-02" {
   instance_type               = "t3.micro"
   subnet_id                   = "${aws_subnet.vpc_public_sn.id}"
   associate_public_ip_address = "true"
-  user_data                   = "${file(userdata.sh)}"
+  user_data                   = "${file("userdata.sh")}"
 }
