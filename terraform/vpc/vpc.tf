@@ -37,7 +37,7 @@ resource "aws_subnet" "vpc_public_sn" {
 resource "aws_subnet" "vpc_private_sn" {
   vpc_id            = "${aws_vpc.vpc_name.id}"
   cidr_block        = "${var.vpc_private_subnet_1_cidr}"
-  availability_zone = "eu-north-1a"
+  availability_zone = "eu-north-1b"
   tags = {
     Name = "vpc_private_sn"
   }

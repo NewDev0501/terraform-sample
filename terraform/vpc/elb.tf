@@ -2,7 +2,7 @@
 resource "aws_alb" "ecs-load-balancer" {
     name                = "ecs-load-balancer"
     security_groups     = ["${aws_security_group.vpc_public_sg.id}"]
-    subnets             = ["${aws_subnet.vpc_public_sn.id}"]
+    subnets             = ["${aws_subnet.vpc_public_sn.id}", "${aws_subnet.vpc_private_sn.id}"]
 
     tags = {
       Name = "ecs-load-balancer"
