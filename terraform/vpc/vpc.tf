@@ -81,7 +81,7 @@ resource "aws_security_group" "vpc_public_sg" {
     to_port   = 0
     protocol  = "tcp"
     cidr_blocks = [
-    "${var.vpc_public_subnet_1_cidr}"]
+    "${var.vpc_access_from_ip_range}"]
   }
 
   egress {
