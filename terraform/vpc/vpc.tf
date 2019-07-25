@@ -77,8 +77,8 @@ resource "aws_security_group" "vpc_public_sg" {
   }
 
   ingress {
-    from_port = 0
-    to_port   = 0
+    from_port = 80
+    to_port   = 80
     protocol  = "tcp"
     cidr_blocks = [
     "${var.vpc_access_from_ip_range}"]
