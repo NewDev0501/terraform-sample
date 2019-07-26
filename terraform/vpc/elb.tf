@@ -7,7 +7,7 @@ resource "aws_alb" "ecs-load-balancer" {
   tags = {
     Name = "ecs-load-balancer"
   }
-
+  
 }
 
 resource "aws_alb_target_group" "ecs-target-group" {
@@ -30,7 +30,7 @@ resource "aws_alb_target_group" "ecs-target-group" {
   tags = {
     Name = "ecs-target-group"
   }
-
+  #instances = ["${aws_instance.ec2-01.id}"]
 }
 
 resource "aws_alb_listener" "alb-listener" {
@@ -43,5 +43,4 @@ resource "aws_alb_listener" "alb-listener" {
     type             = "forward"
   }
 
-  #instances = ["${aws_instance.ec2-01.id}", "${aws_instance.ec2-02.id}"]
 }
